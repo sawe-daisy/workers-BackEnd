@@ -125,7 +125,7 @@ class Jobpost(models.Model):
     user = models.ForeignKey(Profile, null=True, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)    
     post_pic = CloudinaryField('Image')
-    job_category = models.ForeignKey(jobcategory, on_delete=models.CASCADE, related_name='job_category')
+    job_category = models.ForeignKey(jobcategory, on_delete=models.CASCADE, related_name='jobcategory')
     job_description = models.CharField(max_length=100)    
     contact = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
